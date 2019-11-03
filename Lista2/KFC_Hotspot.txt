@@ -1,0 +1,43 @@
+Using interface ap0 with hwaddr c4:d9:87:8a:d4:f6 and ssid "KFC_Hotspot"
+ap0: interface state UNINITIALIZED->ENABLED
+ap0: AP-ENABLED 
+ap0: STA b4:86:55:60:51:36 IEEE 802.11: authenticated
+ap0: STA b4:86:55:60:51:36 IEEE 802.11: associated (aid 1)
+ap0: AP-STA-CONNECTED b4:86:55:60:51:36
+ap0: STA b4:86:55:60:51:36 RADIUS: starting accounting session 6C9F5772EFDCBB9B
+ap0: AP-STA-DISCONNECTED b4:86:55:60:51:36
+ap0: STA b4:86:55:60:51:36 IEEE 802.11: disassociated
+ap0: STA b4:86:55:60:51:36 IEEE 802.11: disassociated
+ap0: STA b4:86:55:60:51:36 IEEE 802.11: disassociated
+ap0: STA b4:86:55:60:51:36 IEEE 802.11: deauthenticated due to inactivity (timer DEAUTH/REMOVE)
+ap0: STA b0:eb:57:a7:3f:30 IEEE 802.11: authenticated
+ap0: STA b0:eb:57:a7:3f:30 IEEE 802.11: associated (aid 1)
+AP-STA-CONNECTED b0:eb:57:a7:3f:30
+ap0: STA b0:eb:57:a7:3f:30 RADIUS: starting accounting session 5590ECEE1A91A5B8
+ap0: AP-STA-DISCONNECTED b0:eb:57:a7:3f:30
+ap0: STA b0:eb:57:a7:3f:30 IEEE 802.11: disassociated
+ap0: STA b0:eb:57:a7:3f:30 IEEE 802.11: deauthenticated due to inactivity (timer DEAUTH/REMOVE)
+ap0: STA 70:8a:09:25:69:01 IEEE 802.11: authenticated
+ap0: STA 70:8a:09:25:69:01 IEEE 802.11: associated (aid 1)
+ap0: AP-STA-CONNECTED 70:8a:09:25:69:01
+ap0: STA 70:8a:09:25:69:01 RADIUS: starting accounting session 89D719BA7F630B5F
+ap0: AP-STA-DISCONNECTED 70:8a:09:25:69:01
+ap0: STA 70:8a:09:25:69:01 IEEE 802.11: disassociated
+STA 70:8a:09:25:69:01 IEEE 802.11: disassociated
+ap0: STA 70:8a:09:25:69:01 IEEE 802.11: deauthenticated due to inactivity (timer DEAUTH/REMOVE)
+ap0: STA 14:5f:94:fe:c1:a9 IEEE 802.11: authenticated
+ap0: STA 14:5f:94:fe:c1:a9 IEEE 802.11: associated (aid 1)
+ap0: AP-STA-CONNECTED 14:5f:94:fe:c1:a9
+ap0: STA 14:5f:94:fe:c1:a9 RADIUS: starting accounting session 623853B10496CA2E
+ap0: AP-STA-DISCONNECTED 14:5f:94:fe:c1:a9
+ap0: STA 14:5f:94:fe:c1:a9 IEEE 802.11: disassociated
+ap0: STA 14:5f:94:fe:c1:a9 IEEE 802.11: deauthenticated due to inactivity (timer DEAUTH/REMOVE)
+ap0: STA 9c:b2:b2:5c:cb:9c IEEE 802.11: authenticated
+ap0: STA 9c:b2:b2:5c:cb:9c IEEE 802.11: associated (aid 1)
+ap0: AP-STA-CONNECTED 9c:b2:b2:5c:cb:9c
+ap0: STA 9c:b2:b2:5c:cb:9c RADIUS: starting accounting session 9D8E0679C650E4CC
+ap0: AP-STA-DISCONNECTED 9c:b2:b2:5c:cb:9c
+ap0: STA 9c:b2:b2:5c:cb:9c IEEE 802.11: disassociated
+ap0: STA 9c:b2:b2:5c:cb:9c IEEE 802.11: deauthenticated due to inactivity (timer DEAUTH/REMOVE)
+^Cap0: interface state ENABLED->DISABLED
+
