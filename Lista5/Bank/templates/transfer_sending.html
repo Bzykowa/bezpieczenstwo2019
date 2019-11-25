@@ -1,0 +1,20 @@
+{% extends 'registration/../temp.html' %}
+
+{% block title %} Logging - Safe Bank {% endblock %}
+
+{% block main_content %}
+    {% if user.is_authenticated %}
+    <h1>Send transfer</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'transfers_history' %}">Transfers' history</a>
+        <p><a href="{% url 'logout' %}">Logout</a> </p>
+    {% else %}
+        <p>U R not logged in!</p>
+        <a href="{% url 'login' %}">Log In</a>
+        <a href="{% url 'signup' %}">Register</a>
+    {% endif %}
+{% endblock %}

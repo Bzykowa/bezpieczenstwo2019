@@ -1,0 +1,13 @@
+{% extends 'registration/../temp.html' %}
+
+{% block title %} Logging - Safe Bank {% endblock %}
+
+{% block main_content %}
+    <h1>Logging</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit">Log In</button>
+    </form>
+    <a href="{% url 'password_reset' %}">Reset password</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'temp.html' %}
+{% block title %} Homepage Safe Bank {% endblock %}
+q
+{% block main_content %}
+    {% if user.is_authenticated %}
+        Hello there {{ user.username }} !
+        <p><a href="{% url 'logout' %}">logout</a> </p>
+    {% else %}
+        <p>U R not logged in!</p>
+        <a href="{% url 'login' %}">Log In</a>
+        <a href="{% url 'signup' %}">Register</a>
+    {% endif %}
+{% endblock %}

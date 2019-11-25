@@ -1,0 +1,36 @@
+{% extends 'registration/../temp.html' %}
+
+{% block title %} Logging - Safe Bank{% endblock %}
+
+{% block main_content %}
+
+    {% if user.is_authenticated %}
+    <h1>Transfers' history</h1>
+        <form method="post">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <th>Recipent</th>
+                    <th>Recipent's account number</th>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Date of operation</th>
+                 </tr>
+            {% for t in transfers %}
+                <tr>
+                    <td>{{ t.recipient_name }}</td>
+                    <td>{{ t.recipient_account }}</td>
+                    <td>{{ t.title }}</td>
+                    <td>{{ t.amount }}</td>
+                    <td>{{ t.date }}</td>
+                </tr>
+            {% endfor %}
+            </table>
+        </form>
+        <a href="{% url 'transfer_sending' %}">Retreat</a>
+    {% else %}
+        <p>U R not logged in!</p>
+        <a href="{% url 'login' %}">Log In</a>
+        <a href="{% url 'signup' %}">Register</a>
+    {% endif %}
+{% endblock %}
