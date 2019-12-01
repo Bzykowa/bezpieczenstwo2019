@@ -1,59 +1,59 @@
 #!/usr/bin/env python3
 
-from cryptogram import Cryptogram
+from streamcypher import Streamcypher
 import operator
 
 class Decryptor:
 
     def __init__(self, data_file):
-        # List of cryptograms from file
+        #Kryptogramki z pliku
         self.cryptograms = []
 
-        # Name of file with cryptograms
+        # Nazwa pliku
         self.data_file = data_file
 
-        # Generating dict with letters and signs frequency (ASCII code).
+        # dict z częstotliwością znaków (ASCII).
         self.letters_freq = {
-            'a': 99, 'i': 82, 'o': 86, 'e': 88, 'z': 65, 'n': 57, 'r': 47, 'w': 47, 's': 50, 't': 40, 'c': 43, 'y': 38,
-            'k': 35, 'd': 33, 'p': 31, 'm': 28, 'u': 25, 'j': 23, 'l': 39, 'b': 15, 'g': 14, 'h': 11, 'f': 3, 'q': 1,
+            'a': 100, 'i': 83, 'o': 86, 'e': 88, 'z': 65, 'n': 58, 'r': 47, 'w': 47, 's': 50, 't': 40, 'c': 43, 'y': 38,
+            'k': 36, 'd': 33, 'p': 31, 'm': 28, 'u': 25, 'j': 23, 'l': 39, 'b': 13, 'g': 15, 'h': 10, 'f': 3, 'q': 1,
             'v': 1, 'x': 1, ' ': 100, ',': 16, '.': 10, '-': 10, '"': 10, '!': 10, '?': 10, ':': 10, ';': 5, '(': 10,
             ')': 10
         }
 
-        # Big letters - 1% frequency
+        # Wielkie litery 1%
         for i in range(65, 91):
-            self.letters_freq[chr(i)] = 10
+            self.letters_freq[chr(i)] = 20
 
-        # Numbers - 1% frequency
+        # Liczby 1%
         for i in range(48, 58):
             self.letters_freq[chr(i)] = 10
 
-    # Reading cryptograms from file
+    # Czytanie kryptogramów z pliku
     def get_data_from_file(self):
         with open(self.data_file, 'r') as file:
             for line in file:
-                self.cryptograms.append(Cryptogram(line))
+                self.cryptograms.append(Streamcypher(line))
 
-    # Searching for key which was used to encrypt messages.
+    # Szukanie klucza
     def find_key(self):
         key = []
 
-        # Length of the longest cryptogram
+        # najdłuższy kryptogram
         longest = 0
 
-        # Searching for length of the longest cryptogram
+        # wyznaczanie najdłuższego kryptogramu
         for crypt in self.cryptograms:
             if len(crypt.chars) > longest:
                 longest = len(crypt.chars)
 
         for i in range(0, longest):
-            # Dict with signs which could be key
+            # Dict ze znakami, które mogą być kluczem
             possible_key = {}
 
-            # Cryptograms which length is smaller than current i
+            # Kryptogramy o długości mniejszej niż i
             matching_cryptograms = []
 
-            # Searching for cryptograms which length is smaller than current i
+            # Szukanie takich kryptogramów
             for crypt in self.cryptograms:
                 if i < len(crypt.chars):
                     matching_cryptograms.append(crypt)
@@ -61,16 +61,16 @@ class Decryptor:
             for crypt in matching_cryptograms:
                 for possible in self.letters_freq.keys():
 
-                    # XOR chars of cryptogram with letters in alphabet
+                    # XOR charów kryptogramu z literami alfabetu
                     tmp = (ord(crypt.get_chr(i)) ^ ord(possible), self.letters_freq[possible])
 
-                    # Put into dict frequency of XOR result
+                    # Wsadzenie w dict częstotliwości wyników XOR
                     if tmp[0] not in possible_key.keys():
                         possible_key[tmp[0]] = tmp[1]
                     else:
                         possible_key[tmp[0]] = possible_key.get(tmp[0]) + self.letters_freq.get(possible)
 
-            # Sort possible keys to make searching easier
+            # Sortowanie kluczów dla szybszego szukanka
             tmp_sorted = sorted(possible_key.items(), key=operator.itemgetter(1), reverse=True)
             possible_key = dict(tmp_sorted)
 
@@ -81,11 +81,11 @@ class Decryptor:
                 counter = 0
 
                 for crypt in matching_cryptograms:
-                    # Check if XOR get char from alphabet
+                    # Sprawdzenie czy XOR zwraca znak z alfabetu
                     if (chr(ord(crypt.get_chr(i)) ^ possible)) in self.letters_freq.keys():
                         counter += 1
 
-                # The best key is that which gives a sign from alphabet the most often.
+                # Najlepszy klucz najwięcej razy trafia w znaki z alfabetu
                 if counter > best_counter:
                     best_counter = counter
                     best_possible = possible
@@ -94,7 +94,7 @@ class Decryptor:
 
         return key
 
-    # Write decrypted messages to file
+    # Zapis wyników do pliku
     def output(self):
         key = self.find_key()
         with open('output.txt', 'w') as file:

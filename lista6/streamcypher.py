@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-class Cryptogram:
+class Streamcypher:
 
     def __init__(self, cipher):
         self.chars = []
