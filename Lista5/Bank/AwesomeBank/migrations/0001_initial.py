@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=120)),
                 ('amount', models.DecimalField(decimal_places=2, max_digits=10)),
                 ('date', models.DateTimeField(default=django.utils.timezone.now)),
-                ('sender', models.ForeignKey(editable=False, on_delete=None, to=settings.AUTH_USER_MODEL)),
+                ('sender', models.ForeignKey(editable=False, on_delete=models.PROTECT, to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]

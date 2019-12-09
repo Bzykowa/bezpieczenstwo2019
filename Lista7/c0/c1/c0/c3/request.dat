@@ -1,0 +1,12 @@
+POST /admin/login/ HTTP/1.1
+Host: 127.0.0.1:7000
+Accept-Encoding: gzip
+Connection: keep-alive
+User-Agent: Mozilla/5.0 SF/2.10b
+Range: bytes=0-399999
+Referer: http://127.0.0.1/
+Cookie: csrftoken=SV8z4H5CHtUMm76I5vaPx5sVto4BDpOJU8OtocJGK81rBHchpktCe5mcXwHaeI6c; sessionid=""
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 130
+
+csrfmiddlewaretoken=h3kk4JaCIxnwoUryDum6hlVpeu5zhJDVjg0eoeOGLcubDux7XjFTYlPGICI8S2Vo&username=Smith&password=skipfish&next=/admin/
