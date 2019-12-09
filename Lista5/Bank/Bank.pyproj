@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>Bank</Name>
+    <RootNamespace>Bank</RootNamespace>
+    <WebBrowserPort>8000</WebBrowserPort>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>88201e27-20b2-491e-b038-86c03edbb597</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>Bank.settings</DjangoSettingsModule>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="accounts\admin.py" />
+    <Compile Include="accounts\apps.py" />
+    <Compile Include="accounts\migrations\__init__.py" />
+    <Compile Include="accounts\models.py" />
+    <Compile Include="accounts\tests.py" />
+    <Compile Include="accounts\urls.py" />
+    <Compile Include="accounts\views.py" />
+    <Compile Include="accounts\__init__.py" />
+    <Compile Include="AwesomeBank\admin.py" />
+    <Compile Include="AwesomeBank\apps.py" />
+    <Compile Include="AwesomeBank\forms.py" />
+    <Compile Include="AwesomeBank\migrations\0001_initial.py" />
+    <Compile Include="AwesomeBank\migrations\0002_auto_20181124_2246.py" />
+    <Compile Include="AwesomeBank\migrations\0003_auto_20181201_2110.py" />
+    <Compile Include="AwesomeBank\migrations\__init__.py" />
+    <Compile Include="AwesomeBank\models.py" />
+    <Compile Include="AwesomeBank\tests.py" />
+    <Compile Include="AwesomeBank\views.py" />
+    <Compile Include="AwesomeBank\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="Bank\__init__.py" />
+    <Compile Include="Bank\settings.py" />
+    <Compile Include="Bank\urls.py" />
+    <Compile Include="Bank\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="accounts\" />
+    <Folder Include="accounts\migrations\" />
+    <Folder Include="accounts\migrations\__pycache__\" />
+    <Folder Include="accounts\__pycache__\" />
+    <Folder Include="AwesomeBank\" />
+    <Folder Include="AwesomeBank\migrations\" />
+    <Folder Include="AwesomeBank\migrations\__pycache__\" />
+    <Folder Include="AwesomeBank\__pycache__\" />
+    <Folder Include="Bank\" />
+    <Folder Include="Bank\__pycache__\" />
+    <Folder Include="sent_emails\" />
+    <Folder Include="static\" />
+    <Folder Include="templates\" />
+    <Folder Include="templates\registration\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="accounts\migrations\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="accounts\migrations\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="accounts\__pycache__\admin.cpython-36.pyc" />
+    <Content Include="accounts\__pycache__\admin.cpython-37.pyc" />
+    <Content Include="accounts\__pycache__\apps.cpython-36.pyc" />
+    <Content Include="accounts\__pycache__\apps.cpython-37.pyc" />
+    <Content Include="accounts\__pycache__\models.cpython-36.pyc" />
+    <Content Include="accounts\__pycache__\models.cpython-37.pyc" />
+    <Content Include="accounts\__pycache__\urls.cpython-36.pyc" />
+    <Content Include="accounts\__pycache__\urls.cpython-37.pyc" />
+    <Content Include="accounts\__pycache__\views.cpython-36.pyc" />
+    <Content Include="accounts\__pycache__\views.cpython-37.pyc" />
+    <Content Include="accounts\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="accounts\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="AwesomeBank\migrations\__pycache__\0001_initial.cpython-36.pyc" />
+    <Content Include="AwesomeBank\migrations\__pycache__\0001_initial.cpython-37.pyc" />
+    <Content Include="AwesomeBank\migrations\__pycache__\0002_auto_20181124_2246.cpython-36.pyc" />
+    <Content Include="AwesomeBank\migrations\__pycache__\0002_auto_20181124_2246.cpython-37.pyc" />
+    <Content Include="AwesomeBank\migrations\__pycache__\0003_auto_20181201_2110.cpython-36.pyc" />
+    <Content Include="AwesomeBank\migrations\__pycache__\0003_auto_20181201_2110.cpython-37.pyc" />
+    <Content Include="AwesomeBank\migrations\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="AwesomeBank\migrations\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="AwesomeBank\__pycache__\admin.cpython-36.pyc" />
+    <Content Include="AwesomeBank\__pycache__\admin.cpython-37.pyc" />
+    <Content Include="AwesomeBank\__pycache__\apps.cpython-36.pyc" />
+    <Content Include="AwesomeBank\__pycache__\apps.cpython-37.pyc" />
+    <Content Include="AwesomeBank\__pycache__\forms.cpython-36.pyc" />
+    <Content Include="AwesomeBank\__pycache__\forms.cpython-37.pyc" />
+    <Content Include="AwesomeBank\__pycache__\models.cpython-36.pyc" />
+    <Content Include="AwesomeBank\__pycache__\models.cpython-37.pyc" />
+    <Content Include="AwesomeBank\__pycache__\views.cpython-36.pyc" />
+    <Content Include="AwesomeBank\__pycache__\views.cpython-37.pyc" />
+    <Content Include="AwesomeBank\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="AwesomeBank\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="Bank\__pycache__\settings.cpython-36.pyc" />
+    <Content Include="Bank\__pycache__\settings.cpython-37.pyc" />
+    <Content Include="Bank\__pycache__\urls.cpython-36.pyc" />
+    <Content Include="Bank\__pycache__\urls.cpython-37.pyc" />
+    <Content Include="Bank\__pycache__\wsgi.cpython-36.pyc" />
+    <Content Include="Bank\__pycache__\wsgi.cpython-37.pyc" />
+    <Content Include="Bank\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="Bank\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="requirements.txt" />
+    <Content Include="db.sqlite3" />
+    <Content Include="static\bg.jpg" />
+    <Content Include="static\style.css" />
+    <Content Include="templates\home.html" />
+    <Content Include="templates\registration\login.html" />
+    <Content Include="templates\registration\password_reset_complete.html" />
+    <Content Include="templates\registration\password_reset_confirm.html" />
+    <Content Include="templates\registration\password_reset_done.html" />
+    <Content Include="templates\registration\password_reset_form.html" />
+    <Content Include="templates\signup.html" />
+    <Content Include="templates\temp.html" />
+    <Content Include="templates\transfers_history.html" />
+    <Content Include="templates\transfer_confirm.html" />
+    <Content Include="templates\transfer_sending.html" />
+    <Content Include="templates\transfer_sent.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.html">
+      <SubType>WebBrowser</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
