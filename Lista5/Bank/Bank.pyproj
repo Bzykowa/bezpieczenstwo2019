@@ -5,6 +5,7 @@
     <Name>Bank</Name>
     <RootNamespace>Bank</RootNamespace>
     <WebBrowserPort>8000</WebBrowserPort>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -131,6 +132,7 @@
     <Content Include="templates\transfer_confirm.html" />
     <Content Include="templates\transfer_sending.html" />
     <Content Include="templates\transfer_sent.html" />
+    <Content Include="templates\WebPage1.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.html">

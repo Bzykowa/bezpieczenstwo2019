@@ -7,7 +7,6 @@
     {% if user.is_authenticated %}
     <h1>Transfers' history</h1>
         <form method="post">
-            {% csrf_token %}
             <table>
                 <tr>
                     <th>Recipent</th>
@@ -15,14 +14,16 @@
                     <th>Title</th>
                     <th>Amount</th>
                     <th>Date of operation</th>
+                    <th>Approved</th>
                  </tr>
             {% for t in transfers %}
                 <tr>
                     <td>{{ t.recipient_name }}</td>
-                    <td>{{ t.recipient_account }}</td>
+                    <td id="account">{{ t.recipient_account }}</td>
                     <td>{{ t.title }}</td>
                     <td>{{ t.amount }}</td>
-                    <td>{{ t.date }}</td>
+                    <td id="date">{{ t.date }}</td>
+                    <td>{{ t.approved }}</td>
                 </tr>
             {% endfor %}
             </table>

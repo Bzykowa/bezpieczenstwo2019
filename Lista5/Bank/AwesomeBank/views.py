@@ -5,6 +5,7 @@ from AwesomeBank.models import PreparedTransfer, Transfer
 
 # Create your views here.
 
+#@csrf_exempt
 def transfer_sending(request):
     if request.method == 'POST':
         form = TransferForm(request.POST)
@@ -20,7 +21,7 @@ def transfer_sending(request):
 
     return render(request, 'transfer_sending.html', context)
 
-
+#@csrf_exempt
 def transfer_confirmed(request):
     prepared_transfers = []
 
@@ -32,7 +33,7 @@ def transfer_confirmed(request):
 
         for t in prepared_transfers:
             Transfer.objects.create(recipient_name=t.recipient_name, recipient_account=t.recipient_account,
-                                    title=t.title, amount=t.amount, sender=t.sender)
+                                    title=t.title, amount=t.amount, sender=t.sender, approved=t.approved)
             t.delete()
         return redirect('transfer_sent')
 
@@ -41,7 +42,7 @@ def transfer_confirmed(request):
     }
     return render(request, 'transfer_confirm.html', context)
 
-
+#@csrf_exempt
 def transfer_sent(request):
     transfers = []
     for item in Transfer.objects.all():
@@ -56,7 +57,7 @@ def transfer_sent(request):
 
     return render(request, 'transfer_sent.html', context)
 
-
+#@csrf_exempt
 def transfers_history(request):
     transfers = []
     for item in Transfer.objects.all():
@@ -67,3 +68,23 @@ def transfers_history(request):
         'transfers': transfers
     }
     return render(request, 'transfers_history.html', context)
+
+def approve_panel(request):
+    if not request.user.is_authenticated or not request.user.is_superuser:
+        return redirect("/")
+
+    context = {
+        'transfers': Transfer.objects.filter(approved = False)
+    }
+    return render(request, 'WebPage1.html', context)
+
+def approve_transaction(request, transid):
+    print(type(transid))
+    if not request.user.is_authenticated or not request.user.is_superuser:
+        return redirect("/")
+
+    transaction = Transfer.objects.get(id=transid)
+    transaction.approved = True
+    transaction.save()
+
+    return redirect("/approve_panel")

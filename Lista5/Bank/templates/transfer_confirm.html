@@ -6,7 +6,7 @@
     {% if user.is_authenticated %}
     <h1>Confirm data:</h1>
         <form method="post">
-            {% csrf_token %}
+            {% autoescape off %}
             <table id="transfer_data">
                 <tr>
                     <th>Recipent</th>
@@ -14,6 +14,7 @@
                     <th>Title</th>
                     <th>Amount</th>
                     <th>Date of operation</th>
+                    <th>Approved</th>
                  </tr>
             {% for t in transfers %}
                 <tr>
@@ -22,9 +23,11 @@
                     <td>{{ t.title }}</td>
                     <td>{{ t.amount }}</td>
                     <td id="date">{{ t.date }}</td>
+                    <td>{{ t.approved }}</td>
                 </tr>
             {% endfor %}
             </table>
+            {% endautoescape %}
             <button type="submit">Submit transfer</button>
         </form>
     {% else %}

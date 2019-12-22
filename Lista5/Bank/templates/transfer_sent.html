@@ -5,7 +5,6 @@
 {% block main_content %}
     {% if user.is_authenticated %}
     <h1>Transfer successful</h1>
-        {% csrf_token %}
             <table>
                 <tr>
                     <th>Recipent</th>
@@ -13,6 +12,7 @@
                     <th>Title</th>
                     <th>Amount</th>
                     <th>Date of operation</th>
+                    <th>Approved</th>
                  </tr>
             {% for t in transfers %}
                 <tr>
@@ -20,7 +20,8 @@
                     <td id="account">{{ t.recipient_account }}</td>
                     <td>{{ t.title }}</td>
                     <td>{{ t.amount }}</td>
-                    <td>{{ t.date }}</td>
+                    <td id="date">{{ t.date }}</td>
+                    <td>{{ t.approved }}</td>
                 </tr>
             {% endfor %}
             </table>

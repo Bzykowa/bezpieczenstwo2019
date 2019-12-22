@@ -6,8 +6,9 @@
     {% if user.is_authenticated %}
     <h1>Send transfer</h1>
     <form method="post">
-        {% csrf_token %}
+        {% autoescape off %}
         {{ form.as_p }}
+        {% endautoescape %}
     <button type="submit">Submit</button>
     </form>
     <a href="{% url 'transfers_history' %}">Transfers' history</a>

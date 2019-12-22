@@ -14,17 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.views.generic import TemplateView
-from AwesomeBank.views import transfer_sending, transfer_confirmed, transfer_sent, transfers_history
+from AwesomeBank.views import transfer_sending, transfer_confirmed, transfer_sent, transfers_history, approve_panel, approve_transaction
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('approve_panel', approve_panel, name='WebPage1'),
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('transfer/', transfer_sending, name='transfer_sending'),
     path('transfer_confirm/', transfer_confirmed, name='transfer_confirm'),
     path('transfer_sent/', transfer_sent, name='transfer_sent'),
     path('transfers_history', transfers_history, name='transfers_history'),
-    path('', TemplateView.as_view(template_name='home.html'), name='home')
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    re_path(r"approve/(?P<transid>\d+)$", approve_transaction, name='approve')
 ]
