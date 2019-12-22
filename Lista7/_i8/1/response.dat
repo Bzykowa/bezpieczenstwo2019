@@ -1,0 +1,33 @@
+HTTP/1.1 200 OK
+Date: Sun, 08 Dec 2019 23:58:21 GMT
+Server: WSGIServer/0.2 CPython/3.7.5
+Content-Type: text/html; charset=utf-8
+X-Frame-Options: DENY
+Content-Length: 472
+Vary: Cookie
+X-Content-Type-Options: nosniff
+
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Homepage Safe Bank  </title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+
+<div class="main">
+<div class="bank-name">
+    Safe Bank
+</div>
+    
+    
+        Hello there karcia956@wp.pl !
+        <p><a href="/accounts/logout/">logout</a> </p>
+    
+
+</div>
+</body>
+</html>

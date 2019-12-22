@@ -1,0 +1,44 @@
+HTTP/1.1 200 OK
+Date: Sun, 08 Dec 2019 23:58:27 GMT
+Server: WSGIServer/0.2 CPython/3.7.5
+Content-Type: text/css
+Content-Length: 608
+Content-Disposition: inline; filename="style.css"
+Last-Modified: Sun, 01 Dec 2019 14:27:26 GMT
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: ghostwhite;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    overflow: scroll;
+}
+
+.bank-name {
+    font-size: 7em;
+    text-align: center;
+    font-style: italic;
+    padding-bottom: 5%;
+}
+
+.main {
+    text-align: center;
+    margin: auto;
+    background-color: rgba(201, 255, 244, 0.8);
+    width: 60%;
+    height: 60%;
+    padding: 10%;
+}
+
+table, td, th {
+    text-align: center;
+    border: 0.1em solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+}

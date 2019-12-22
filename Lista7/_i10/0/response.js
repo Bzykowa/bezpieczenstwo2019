@@ -1,0 +1,1 @@
+var res = {'data':'HTTP/1.1 200 OK\x0aDate: Sun, 08 Dec 2019 23:58:27 GMT\x0aServer: WSGIServer/0.2 CPython/3.7.5\x0aContent-Type: text/html; charset=utf-8\x0aX-Frame-Options: DENY\x0aContent-Length: 508\x0aVary: Cookie\x0aX-Content-Type-Options: nosniff\x0aSet-Cookie: sessionid=\x22\x22; expires=Thu, 01 Jan 1970 00:00:00 GMT; Max-Age=0; Path=/\x0a\x0a[...truncated...]\x0a'}

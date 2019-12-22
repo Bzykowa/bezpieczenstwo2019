@@ -1,0 +1,12 @@
+HTTP/1.1 302 Found
+Date: Mon, 09 Dec 2019 00:05:30 GMT
+Server: WSGIServer/0.2 CPython/3.7.5
+Content-Type: text/html; charset=utf-8
+Location: /admin/login/?next=/admin/
+Expires: Mon, 09 Dec 2019 00:05:30 GMT
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate, private
+X-Frame-Options: DENY
+Content-Length: 0
+Vary: Cookie
+X-Content-Type-Options: nosniff
+Set-Cookie: sessionid=""; expires=Thu, 01 Jan 1970 00:00:00 GMT; Max-Age=0; Path=/

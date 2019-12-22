@@ -1,0 +1,17 @@
+GET http://127.0.0.1:7000/ name=http://127.0.0.1:7000/ type=serv linked=yes browsers=0 browser_used=FAST dup=0 code=200 len=472 notes=8 sig=0x9827ca66
+GET http://127.0.0.1:7000/accounts/ name=accounts type=dir linked=yes browsers=0 browser_used=FAST dup=0 returns_404 code=404 len=4385 notes=1 sig=0x4a54da27
+GET http://127.0.0.1:7000/accounts/logout/ name=logout type=dir linked=yes browsers=0 browser_used=FAST dup=0 code=302 len=0 notes=2 sig=0xdef1bcd1
+GET http://127.0.0.1:7000/admin/ name=admin type=dir linked=yes browsers=0 browser_used=FAST dup=0 code=302 len=0 notes=4 sig=0xc87818c8
+GET http://127.0.0.1:7000/admin/login/ name=login type=dir linked=yes browsers=0 browser_used=FAST dup=0 code=200 len=1903 notes=2 sig=0xf64470e9
+POST http://127.0.0.1:7000/admin/login/ DATA:csrfmiddlewaretoken=h3kk4JaCIxnwoUryDum6hlVpeu5zhJDVjg0eoeOGLcubDux7XjFTYlPGICI8S2Vo&username=Smith&password=skipfish&next=/admin/ name=csrfmiddlewaretoken type=param linked=yes browsers=0 browser_used=FAST dup=0 code=0 len=0 notes=1 sig=0xdeb6f368
+GET http://127.0.0.1:7000/admin/login/?next=/admin/ name=next type=param linked=yes browsers=0 browser_used=FAST dup=0 code=0 len=0 notes=1 sig=0xdeb6f368
+POST http://127.0.0.1:7000/admin/login/ DATA:csrfmiddlewaretoken=h3kk4JaCIxnwoUryDum6hlVpeu5zhJDVjg0eoeOGLcubDux7XjFTYlPGICI8S2Vo&username=Smith&password=skipfish&next=/admin/ name=password type=param linked=yes browsers=0 browser_used=FAST dup=0 code=0 len=0 notes=1 sig=0xdeb6f368
+POST http://127.0.0.1:7000/admin/login/ DATA:csrfmiddlewaretoken=h3kk4JaCIxnwoUryDum6hlVpeu5zhJDVjg0eoeOGLcubDux7XjFTYlPGICI8S2Vo&username=Smith&password=skipfish&next=/admin/ name=username type=param linked=yes browsers=0 browser_used=FAST dup=0 code=0 len=0 notes=1 sig=0xdeb6f368
+GET http://127.0.0.1:7000/admin/logout/ name=logout type=dir linked=no browsers=0 browser_used=FAST dup=0 code=302 len=0 notes=3 sig=0x60e1c6ea
+GET http://127.0.0.1:7000/static/ name=static type=dir linked=yes browsers=0 browser_used=FAST dup=0 returns_404 code=404 len=1634 notes=3 sig=0x43e29a64
+GET http://127.0.0.1:7000/static/admin/ name=admin type=dir linked=yes browsers=0 browser_used=FAST dup=0 returns_404 code=404 len=1646 notes=1 sig=0xdf087368
+GET http://127.0.0.1:7000/static/admin/css/ name=css type=dir linked=yes browsers=0 browser_used=FAST dup=0 code=0 len=0 notes=1 sig=0x49aedac3
+GET http://127.0.0.1:7000/static/admin/css/base.css name=base.css type=unknown linked=yes browsers=0 browser_used=FAST dup=0 code=0 len=0 notes=1 sig=0xded6f368
+GET http://127.0.0.1:7000/static/admin/css/login.css name=login.css type=unknown linked=yes browsers=0 browser_used=FAST dup=1 code=0 len=0 notes=1 sig=0xded6f368
+GET http://127.0.0.1:7000/static/admin/css/responsive.css name=responsive.css type=unknown linked=yes browsers=0 browser_used=FAST dup=1 code=0 len=0 notes=1 sig=0xded6f368
+GET http://127.0.0.1:7000/static/style.css/ name=style.css type=dir linked=yes browsers=0 browser_used=FAST dup=0 code=200 len=608 notes=3 sig=0xdef03878
